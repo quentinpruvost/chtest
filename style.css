@@ -1,0 +1,2776 @@
+/* Variables CSS pour les couleurs, polices et espacements */
+:root {
+    --primary-blue: #007bff; /* Bleu vif pour les actions principales */
+    --dark-blue: #004085; /* Bleu foncé pour le texte et les fonds */
+    --accent-green: #6cbf4d; /* Vert pour les accents et titres secondaires */
+    --red-urgence: #dc3545; /* Rouge pour le bouton urgence */
+    --light-gray: #f8f9fa; /* Arrière-plan léger */
+    --medium-gray: #e9ecef; /* Bordures, séparateurs */
+    --text-color: #343a40; /* Texte principal */
+    --heading-color: #212529; /* Titres */
+
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
+
+    --border-radius: 8px;
+    --spacing-xs: 10px;
+    --spacing-sm: 15px;
+    --spacing-md: 30px;
+    --spacing-lg: 60px;
+    --spacing-xl: 90px;
+}
+
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    color: var(--heading-color);
+    line-height: 1.3;
+    margin-bottom: var(--spacing-sm);
+}
+
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.2rem; }
+
+p {
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.05rem;
+}
+
+a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transition de couleur pour les liens normaux */
+}
+
+a:hover {
+    color: var(--dark-blue); /* Assombrissement léger pour les liens normaux */
+    text-decoration: underline; /* Optionnel: conserver le soulignement */
+}
+
+ul {
+    list-style: none;
+}
+
+/* Sections communes */
+section {
+    padding: var(--spacing-xl) 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+    text-align: center;
+    color: var(--dark-blue);
+}
+.section-title.text-left {
+    text-align: left;
+}
+
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--accent-green);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-description {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg);
+}
+.section-description.text-left {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.button-center {
+    text-align: center;
+    margin-top: var(--spacing-lg);
+}
+
+/* --- Boutons --- */
+.btn-primary, .btn-secondary, .btn-secondary-outline, .btn-primary-small, .btn-urgence {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 50px; /* Boutons arrondis */
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transition douce pour tous les changements */
+    border: 2px solid transparent; /* Bordure transparente par défaut */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Ombre douce */
+}
+
+/* Bouton Primaire (bleu) */
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: #fff;
+    border-color: var(--primary-blue);
+}
+
+.btn-primary:hover {
+    background-color: #0069d9; /* Bleu légèrement plus foncé */
+    border-color: #0062cc; /* Bordure aussi plus foncée */
+    text-decoration: none;
+    transform: translateY(-1px); /* Léger soulèvement pour l'effet de clic */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Bouton Secondaire (vert) */
+.btn-secondary {
+    background-color: var(--accent-green);
+    color: #fff;
+    border-color: var(--accent-green);
+    margin-left: var(--spacing-sm);
+}
+
+.btn-secondary:hover {
+    background-color: #5aa63c; /* Vert légèrement plus foncé */
+    border-color: #569b38;
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Bouton Secondaire Outline (contour bleu) */
+.btn-secondary-outline {
+    background-color: transparent;
+    color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+.btn-secondary-outline:hover {
+    background-color: transparent; /* Conserver le fond transparent */
+    color: var(--dark-blue); /* Texte légèrement assombri */
+    border-color: var(--dark-blue); /* Bordure assombrie */
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Bouton Primaire Small (pour footer et autres petits usages) */
+.btn-primary-small {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-blue);
+    color: #fff;
+    border-color: var(--primary-blue);
+    box-shadow: none;
+}
+.btn-primary-small:hover {
+    background-color: #0069d9; /* Bleu légèrement plus foncé */
+    border-color: #0062cc;
+    transform: none; /* Pas de transformation sur hover pour les petits boutons si non désiré */
+    box-shadow: none;
+}
+.btn-primary-small i {
+    margin-left: 8px;
+}
+
+/* Bouton Urgence (rouge) */
+.btn-urgence {
+    background-color: var(--red-urgence);
+    color: #fff;
+    border-color: var(--red-urgence);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(220,53,69,0.2);
+}
+.btn-urgence:hover {
+    background-color: #c82333; /* Rouge légèrement plus foncé */
+    border-color: #c82333;
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(220,53,69,0.3);
+}
+.btn-urgence i {
+    margin-right: 8px;
+}
+
+/* --- Liens style "carte" (ex: .access-card .card-link, .news-card .card-link, .detail-item .btn-link) --- */
+.card-link, .btn-link {
+    color: var(--primary-blue);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.card-link:hover, .btn-link:hover {
+    color: var(--dark-blue); /* Assombrissement du texte */
+    text-decoration: underline; /* Re-ajouter le soulignement pour le hover */
+}
+
+/* Pour les icônes à côté des liens (ex: flèche) */
+.card-link i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.card-link:hover i {
+    transform: translateX(5px); /* Animation légère de la flèche */
+}
+
+/* Styles spécifiques à l'icône de recherche */
+.header-actions .btn-search:hover {
+    color: var(--primary-blue); /* Conserver le bleu original pour l'icône de recherche */
+}
+/* Pas de transformation ou d'ombre pour le bouton de recherche, il est juste une icône */
+
+
+/* --- Icônes décoratives --- */
+.icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background-color: var(--light-gray);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.icon-wrapper.small-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    margin: 0 0 15px;
+    background-color: var(--primary-blue);
+    color: #fff;
+}
+
+
+/* --- Top Bar --- */
+.top-bar {
+    background-color: var(--dark-blue);
+    color: #fff;
+    padding: 10px 0;
+    font-size: 0.95rem;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar .contact-info i {
+    margin-right: 8px;
+    color: var(--accent-green); /* Couleur d'accent pour l'icône téléphone */
+}
+.top-bar .contact-info a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.top-bar .contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* --- Header --- */
+.main-header {
+    background-color: #fff;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--medium-gray);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px; /* Ajustez la hauteur de votre logo */
+    vertical-align: middle;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.main-nav ul li {
+    position: relative;
+}
+
+.main-nav ul li a {
+    color: var(--dark-blue);
+    font-weight: 600;
+    padding: 10px 0;
+    display: block;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+.main-nav ul li.active a, .main-nav ul li a.active-dropdown-link { /* Ajout de .active-dropdown-link pour le JS */
+    color: var(--primary-blue);
+    border-bottom: 2px solid var(--primary-blue);
+}
+
+.main-nav ul li a i {
+    margin-left: 5px;
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none; /* Caché par défaut */
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    z-index: 1;
+    min-width: 240px; /* Plus large pour les nombreux liens */
+    border-radius: var(--border-radius);
+    padding: 10px 0;
+    top: 100%; /* Positionne juste en dessous du lien parent */
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px); /* Légère translation pour l'animation */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block; /* Affiché au survol */
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+/* Ajout pour le comportement mobile (géré par JS) */
+.dropdown-menu.show {
+    display: block; /* Affiché via JS pour mobile */
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+.dropdown-menu a {
+    color: var(--text-color);
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-weight: 400;
+    white-space: nowrap; /* Empêche le retour à la ligne */
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--light-gray);
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+/* Header actions (search button) */
+.header-actions {
+    position: relative; /* Nécessaire pour positionner l'overlay de recherche */
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.header-actions .btn-search {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    color: var(--dark-blue);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 1010; /* Au-dessus de l'overlay */
+    position: relative;
+}
+
+.header-actions .btn-search:hover {
+    color: var(--primary-blue);
+}
+
+/* --- Search Overlay Styles --- */
+.search-overlay {
+    position: fixed; /* Fixé pour couvrir toute la fenêtre */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 64, 133, 0.95); /* Bleu foncé semi-transparent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1005; /* Au-dessus du header, mais en dessous du bouton de recherche */
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.search-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.search-bar {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    padding: var(--spacing-sm) var(--spacing-md);
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transform: translateY(-20px); /* Animation initiale */
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.search-overlay.show .search-bar {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.search-bar input[type="text"] { /* Cible plus précisément l'input type="text" */
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.search-bar button:hover {
+    color: var(--dark-blue);
+}
+
+.search-bar .close-search {
+    font-size: 1.8rem; /* Plus grand pour le bouton de fermeture */
+    color: var(--red-urgence);
+}
+.search-bar .close-search:hover {
+    color: #c82333;
+}
+
+
+/* --- Hero Section (Accueil) --- */
+.hero-section {
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--dark-blue);
+}
+
+/* IMPORTANT : Ciblage plus spécifique pour la vidéo de la section héros */
+.hero-section .hero-video-container { /* Notez le '.hero-section' ajouté ici */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hero-section .hero-video-container video { /* Notez le '.hero-section' ajouté ici */
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    filter: brightness(0.4); /* Assombrit la vidéo */
+}
+/* IMPORTANT : L'ancien .hero-image-container img a été supprimé ou renommé pour ne pas interférer */
+
+
+.hero-overlay {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+.hero-content h1 {
+    font-size: 4.2rem;
+    color: #fff;
+    margin-bottom: var(--spacing-sm);
+    text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-md);
+    text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.hero-buttons {
+    margin-top: var(--spacing-md);
+}
+
+
+/* --- Quick Access Section (Accueil) --- */
+.quick-access-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--light-gray);
+    text-align: center;
+}
+
+.access-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.access-card {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.access-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.access-card h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+    color: var(--dark-blue);
+}
+
+.access-card p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    flex-grow: 1;
+}
+
+.access-card .card-link {
+    margin-top: var(--spacing-sm);
+    font-weight: 600;
+    color: var(--primary-blue);
+    display: flex;
+    align-items: center;
+}
+
+.access-card .card-link i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.access-card .card-link:hover i {
+    transform: translateX(5px);
+}
+
+/* --- About Section (Accueil ou page générique) --- */
+.about-section {
+    padding: var(--spacing-xl) 0;
+    background-color: #fff;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 400px;
+}
+
+.about-image img {
+    /* Ces styles devraient être suffisants pour des images "normales" */
+    width: 100%;
+    height: auto;
+    display: block; /* Important pour éviter les espaces sous l'image */
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.about-text {
+    flex: 1.5;
+    min-width: 400px;
+}
+
+.about-text h2 {
+    font-size: 2.8rem;
+    text-align: left;
+    margin-top: 0;
+}
+
+.about-text p {
+    margin-bottom: var(--spacing-sm);
+}
+
+.about-text .btn-primary {
+    margin-top: var(--spacing-sm);
+}
+
+/* --- Services Section (Accueil ou page Offre de Soins) --- */
+.services-section {
+    background-color: var(--light-gray);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.service-card {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.07);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.service-card h3 {
+    font-size: 1.6rem;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+/* --- Testimonials Section (Accueil) --- */
+.testimonials-section {
+    background-color: var(--primary-blue);
+    color: #fff;
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.testimonials-section .section-subtitle,
+.testimonials-section .section-title {
+    color: #fff;
+}
+
+.testimonial-carousel {
+    max-width: 800px;
+    margin: var(--spacing-lg) auto var(--spacing-md);
+}
+
+.testimonial-card {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.testimonial-card .quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.6;
+}
+
+.testimonial-card .author {
+    font-size: 1.1rem;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: var(--spacing-md);
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active, .dot:hover {
+    background-color: #fff;
+}
+
+/* --- News & Events Section (Accueil et page Actualités) --- */
+.news-events-section {
+    padding: var(--spacing-xl) 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.news-card {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.07);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.news-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover img {
+    transform: scale(1.05);
+}
+
+.news-content {
+    padding: var(--spacing-md);
+    text-align: left;
+}
+
+.news-date {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--gray-text);
+    margin-bottom: 10px;
+    color: #6a747c;
+}
+
+.news-date i {
+    margin-right: 5px;
+    color: var(--primary-blue);
+}
+
+.news-content h3 {
+    font-size: 1.4rem;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+}
+
+.news-content p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.news-content .card-link {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* --- Contact CTA Section (Accueil) --- */
+.contact-cta-section {
+    background-color: var(--dark-blue);
+    padding: var(--spacing-lg) 0;
+    color: #fff;
+    text-align: center;
+}
+
+.contact-cta-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: var(--spacing-md);
+}
+
+.cta-text-content {
+    flex: 2;
+    text-align: left;
+    min-width: 300px;
+}
+
+.cta-text-content h2 {
+    color: #fff;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.cta-text-content p {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 0;
+}
+
+.cta-buttons {
+    flex: 1;
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: flex-end;
+    min-width: 300px;
+}
+
+.cta-buttons .btn-secondary-outline {
+    border-color: #fff;
+    color: #fff;
+}
+
+.cta-buttons .btn-secondary-outline:hover {
+    background-color: #fff;
+    color: var(--dark-blue);
+}
+
+.cta-buttons .btn-secondary-outline i {
+    margin-right: 8px;
+}
+
+/* --- Page Hero pour pages internes --- */
+.page-hero {
+    background-color: var(--dark-blue);
+    color: #fff;
+    padding: 100px 0 60px;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.page-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* --- Content Sections for internal pages --- */
+.content-section {
+    padding: var(--spacing-xl) 0;
+}
+.content-section.bg-light {
+    background-color: var(--light-gray);
+}
+
+.content-grid {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+    margin-top: var(--spacing-lg);
+}
+
+.content-grid.reverse-grid {
+    flex-direction: row-reverse;
+}
+
+.content-text {
+    flex: 1.5;
+    min-width: 400px;
+}
+
+.content-text h2 {
+    margin-bottom: var(--spacing-md);
+}
+
+.content-text ul {
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.content-text ul li {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+    color: var(--text-color);
+}
+
+.content-text ul li i {
+    color: var(--accent-green);
+    margin-right: 10px;
+    width: 20px; /* Pour aligner le texte */
+    text-align: center;
+}
+
+.content-image {
+    flex: 1;
+    min-width: 400px;
+    text-align: center;
+}
+
+.content-image img {
+    /* Ces styles sont pour toutes les images dans .content-image */
+    width: 100%;
+    height: auto;
+    display: block; /* Important pour éviter les espaces sous l'image */
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Specific to patients.html - download grid */
+.download-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.download-item {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.07);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.download-item i {
+    font-size: 3rem;
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-sm);
+}
+
+.download-item h3 {
+    font-size: 1.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+}
+
+.download-item p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    flex-grow: 1;
+}
+
+.download-item .btn-secondary-outline {
+    margin-top: var(--spacing-sm);
+    border-radius: var(--border-radius);
+}
+.download-item .btn-secondary-outline i {
+    margin-left: 8px;
+}
+
+/* Specific to soins.html - service list (annuaire) */
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.service-list .list-item {
+    background-color: #fff;
+    border-left: 5px solid var(--primary-blue);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.service-list .list-item h3 {
+    color: var(--dark-blue);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.service-list .list-item p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+/* --- Contact Details Section (pour contact.html) --- */
+.contact-details-section {
+    padding: var(--spacing-xl) 0;
+    background-color: #fff;
+}
+
+.contact-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    text-align: center;
+    margin-top: var(--spacing-lg);
+}
+
+.detail-item {
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detail-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.detail-item i {
+    font-size: 3rem;
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-sm);
+}
+
+.detail-item h3 {
+    font-size: 1.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+}
+
+.detail-item p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.detail-item .btn-link {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* --- Contact Form Section (pour contact.html) --- */
+.contact-form-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--light-gray); /* Correction: Utilise light-gray comme prévu */
+    text-align: center;
+}
+
+.contact-form-wrapper {
+    max-width: 700px;
+    margin: var(--spacing-lg) auto 0;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    padding: var(--spacing-lg);
+}
+
+.contact-form .form-group {
+    margin-bottom: var(--spacing-md);
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--dark-blue);
+    font-size: 1rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--medium-gray);
+    border-radius: var(--border-radius);
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    color: var(--text-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical; /* Permet le redimensionnement vertical */
+}
+
+.contact-form .form-submit-btn {
+    width: auto; /* Bouton prend juste la largeur nécessaire */
+    margin-top: var(--spacing-md);
+    padding: 14px 40px; /* Plus grand pour le bouton d'envoi */
+}
+
+/* --- Map Section (pour contact.html) --- */
+.map-section {
+    padding: var(--spacing-xl) 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.map-embed {
+    margin-top: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    overflow: hidden; /* Assure que les bords arrondis s'appliquent à l'iframe */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.map-embed iframe {
+    border: 0;
+    width: 100%;
+    height: 450px;
+    display: block;
+}
+
+/* --- Footer --- */
+.main-footer {
+    background-color: var(--dark-blue);
+    color: #ccc;
+    padding: var(--spacing-xl) 0 var(--spacing-sm);
+    font-size: 0.95rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-col {
+    padding: var(--spacing-sm) 0;
+}
+
+.footer-logo img {
+    height: 70px;
+    filter: brightness(0) invert(1);
+    margin-bottom: 20px;
+}
+
+.footer-col h4 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a,
+.footer-contact p,
+.footer-contact p a {
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover,
+.footer-contact p a:hover {
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+.footer-contact p i {
+    margin-right: 10px;
+    color: var(--primary-blue);
+}
+
+.footer-social {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--primary-blue);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+
+/* --- Accordion styles for patients.html (Votre séjour) --- */
+.accordion-container {
+    max-width: 800px;
+    margin: var(--spacing-lg) auto;
+    border: 1px solid var(--medium-gray);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--medium-gray);
+}
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    background-color: #fff;
+    padding: var(--spacing-md);
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: var(--light-gray);
+}
+
+.accordion-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: var(--dark-blue);
+    display: flex;
+    align-items: center;
+}
+
+.accordion-header h3 i {
+    margin-right: 15px;
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+}
+
+.accordion-icon {
+    font-size: 1rem;
+    color: var(--dark-blue);
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    background-color: #fff;
+    padding: 0 var(--spacing-md);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.accordion-content.show {
+    max-height: 500px; /* Grande valeur pour permettre l'expansion */
+    padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.accordion-content p {
+    margin-bottom: var(--spacing-sm);
+    font-size: 1rem;
+}
+.accordion-content p:last-child {
+    margin-bottom: 0;
+}
+.accordion-content ul {
+    margin: var(--spacing-sm) 0 var(--spacing-md) 0;
+    padding-left: 20px;
+}
+.accordion-content ul li {
+    margin-bottom: 8px;
+    list-style: disc; /* Remettre les puces pour les listes dans l'accordéon */
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+
+    .top-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .top-bar-content {
+        flex-direction: column;
+    }
+    .btn-urgence {
+        margin-top: 10px;
+    }
+
+    .main-nav ul {
+        gap: var(--spacing-sm);
+    }
+
+    .main-nav ul li a {
+        padding: 8px 0;
+    }
+
+    .hero-section {
+        height: 500px;
+    }
+
+    .hero-content h1 {
+        font-size: 3.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    .btn-primary, .btn-secondary {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .btn-secondary {
+        margin-left: 0;
+        margin-top: var(--spacing-sm);
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+    .section-description {
+        font-size: 1rem;
+    }
+
+    .quick-access-section, .about-section, .services-section, .testimonials-section, .news-events-section, .contact-form-section, .contact-details-section, .map-section, .page-hero, .content-section {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .testimonial-card .quote {
+        font-size: 1.2rem;
+    }
+
+    .about-content, .content-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image, .about-text, .content-image, .content-text {
+        min-width: unset;
+        width: 100%;
+        text-align: center;
+    }
+    .content-grid.reverse-grid {
+        flex-direction: column;
+    }
+
+
+    .about-text h2, .content-text h2 {
+        text-align: center;
+    }
+    .content-text ul {
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 400px;
+    }
+
+    .service-card {
+        text-align: center;
+    }
+    .service-card .icon-wrapper.small-icon {
+        margin: 0 auto 15px;
+    }
+
+    .contact-form-wrapper {
+        padding: var(--spacing-md);
+    }
+    .form-submit-btn {
+        width: 100%;
+    }
+
+    .contact-details-grid {
+        grid-template-columns: 1fr;
+    }
+    .detail-item {
+        padding: var(--spacing-sm);
+    }
+    .detail-item h3 {
+        font-size: 1.3rem;
+    }
+    .detail-item p {
+        font-size: 0.9rem;
+    }
+
+    .news-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .accordion-header h3 {
+        font-size: 1.1rem;
+    }
+    .accordion-header h3 i {
+        font-size: 1.3rem;
+        margin-right: 10px;
+    }
+    .accordion-content p, .accordion-content ul li {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        padding: 10px 0;
+    }
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo img {
+        height: 50px;
+    }
+    .main-nav {
+        margin-top: var(--spacing-sm);
+        width: 100%;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+    .main-nav ul li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid var(--medium-gray);
+    }
+    .main-nav ul li:last-child {
+        border-bottom: none;
+    }
+    .main-nav ul li a {
+        padding: 12px 0;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+
+    .dropdown-menu.show {
+        max-height: 350px;
+    }
+
+    .dropdown-menu a {
+        padding: 10px 0;
+        font-size: 0.9rem;
+        background-color: var(--light-gray);
+        border-top: 1px solid var(--medium-gray);
+    }
+    .dropdown-menu a:hover {
+        background-color: var(--medium-gray);
+    }
+
+
+    .header-actions {
+        margin-top: var(--spacing-sm);
+    }
+
+    .hero-section {
+        height: 400px;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    .btn-primary, .btn-secondary {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .btn-secondary {
+        margin-left: 0;
+        margin-top: var(--spacing-sm);
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+    .section-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.3rem; }
+
+    .logo img {
+        height: 45px;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .icon-wrapper {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    .news-card img {
+        height: 180px;
+    }
+}
+/* --- Annexes Section (annexe.html) --- */
+.annexes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 colonnes sur desktop, adaptatif */
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.annexe-card {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--medium-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.annexe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.annexe-icon {
+    font-size: 3rem;
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-sm);
+}
+
+.annexe-card h3 {
+    font-size: 1.6rem;
+    color: var(--dark-blue);
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+}
+
+.annexe-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+    flex-grow: 1; /* Permet à la description de prendre l'espace */
+    margin-bottom: var(--spacing-sm);
+}
+
+.annexe-card .btn-link {
+    margin-top: var(--spacing-sm); /* Pour espacer du paragraphe */
+}
+
+.annexe-contact {
+    font-size: 0.95rem;
+    color: var(--dark-gray);
+    margin-top: var(--spacing-xs);
+}
+.annexe-contact a {
+    color: var(--dark-gray); /* L'hyperlien du numéro de téléphone reste discret */
+}
+.annexe-contact a:hover {
+    color: var(--primary-blue);
+}
+
+/* Responsive pour la nouvelle section */
+@media (max-width: 992px) {
+    .annexes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .annexes-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    }
+}
+/* ... (votre CSS existant jusqu'à la fin) ... */
+
+/* --- IFMS Page Styles (ifms.html) --- */
+
+/* Chiffres Clés */
+.figures-grid {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.figure-item {
+    background-color: var(--primary-blue);
+    color: #fff;
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    text-align: center;
+    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.figure-number {
+    font-size: 4rem; /* Grande taille pour le chiffre */
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: var(--spacing-xs);
+}
+
+.figure-description {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 0;
+}
+
+.logo-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.logo-grid img {
+    max-height: 80px; /* Taille maximale pour les logos partenaires */
+    width: auto;
+    object-fit: contain;
+}
+
+/* Liens du site IFMS (Contact section) */
+.ifms-site-links {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.ifms-site-links h3 {
+    color: var(--dark-blue);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+.ifms-site-links .links-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.ifms-site-links .links-list li {
+    margin-bottom: 0; /* Pas de marge interne pour les li */
+}
+
+.ifms-site-links .links-list li a {
+    display: flex;
+    align-items: center;
+    background-color: var(--light-gray);
+    border: 1px solid var(--medium-gray);
+    border-radius: var(--border-radius);
+    padding: 12px 20px;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none; /* Enlever le soulignement par défaut */
+}
+
+.ifms-site-links .links-list li a:hover {
+    background-color: var(--primary-blue);
+    color: #fff;
+    border-color: var(--primary-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.ifms-site-links .links-list li a i {
+    margin-right: 10px;
+    color: var(--primary-blue); /* Couleur de l'icône */
+    transition: color 0.3s ease;
+}
+
+.ifms-site-links .links-list li a:hover i {
+    color: #fff; /* L'icône devient blanche au survol */
+}
+
+/* Responsive pour IFMS */
+@media (max-width: 768px) {
+    .figure-item {
+        min-width: 150px;
+        padding: var(--spacing-md);
+    }
+    .figure-number {
+        font-size: 3rem;
+    }
+    .figure-description {
+        font-size: 1rem;
+    }
+    .ifms-site-links .links-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo-grid img {
+        max-height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .figure-item {
+        width: 100%;
+        margin-bottom: var(--spacing-md);
+    }
+    .ifms-site-links .links-list li a {
+        width: 100%;
+        justify-content: center;
+    }
+}
+/* ... (votre CSS existant) ... */
+
+/* Styles spécifiques pour le bouton/lien "Retour au site du CH" dans la nav de l'IFMS */
+.main-nav ul li a.btn-retour-ch {
+    background-color: var(--primary-blue); /* Couleur principale du CH */
+    color: #fff;
+    padding: 8px 15px; /* Rendre le bouton un peu plus petit pour la nav */
+    border-radius: var(--border-radius); /* Bords ronds comme d'autres boutons */
+    margin-left: var(--spacing-sm); /* Espacement du lien précédent */
+    font-weight: 500; /* Moins gras que les boutons principaux */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid var(--primary-blue); /* Bordure pour la cohérence */
+}
+
+.main-nav ul li a.btn-retour-ch:hover {
+    background-color: var(--dark-blue); /* Assombrissement au survol */
+    border-color: var(--dark-blue);
+    color: #fff;
+    text-decoration: none; /* Pas de soulignement au survol */
+}
+
+.main-nav ul li a.btn-retour-ch i {
+    margin-right: 8px; /* Espacement de l'icône */
+    margin-left: 0; /* Réinitialiser le margin-left si hérité */
+}
+
+/* Ajustement responsive pour ce nouveau bouton dans la nav */
+@media (max-width: 992px) {
+    .main-nav ul li a.btn-retour-ch {
+        margin-left: 0; /* Pas de marge à gauche sur mobile */
+        margin-top: var(--spacing-sm); /* Espacement vertical */
+        width: 80%; /* Prend plus de largeur */
+        margin-left: auto;
+        margin-right: auto; /* Centrer */
+        display: flex; /* Pour centrer le texte et l'icône */
+        justify-content: center;
+    }
+}
+/* ... (votre CSS existant jusqu'à la fin) ... */
+
+/* --- Footer spécifique à l'IFMS (ifms-footer.html) --- */
+.footer-ifms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 3 colonnes pour le design souhaité */
+    gap: var(--spacing-md);
+    background-color: var(--dark-blue); /* Couleur de fond sombre */
+    color: #fff; /* Texte blanc */
+    padding: var(--spacing-xl) var(--spacing-sm) var(--spacing-lg); /* Padding ajusté */
+}
+
+.footer-ifms-col {
+    padding: var(--spacing-sm) 0;
+}
+
+.footer-ifms-col h4 {
+    color: #fff;
+    margin-bottom: var(--spacing-md);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.footer-ifms-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-ifms-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-ifms-col ul li a,
+.footer-ifms-col p,
+.footer-ifms-col p a {
+    color: #bdbdbd; /* Gris clair pour le texte */
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-ifms-col ul li a:hover,
+.footer-ifms-col p a:hover {
+    color: var(--primary-blue); /* Bleu primaire au survol */
+    text-decoration: underline;
+}
+
+.footer-ifms-col ul li a i {
+    margin-right: 8px;
+    color: var(--primary-blue); /* Icône en bleu primaire */
+}
+.footer-ifms-col ul li a:hover i {
+    color: var(--primary-blue); /* Garde la couleur au survol pour les icônes */
+}
+
+.footer-ifms-contact p {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+/* Responsive pour le footer IFMS */
+@media (max-width: 992px) {
+    .footer-ifms-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        text-align: center;
+    }
+    .footer-ifms-col ul {
+        display: inline-block; /* Permet de centrer la liste */
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-ifms-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
+    }
+    .footer-ifms-col {
+        padding: var(--spacing-md) 0;
+    }
+    .footer-ifms-col ul {
+        text-align: center; /* Centre les éléments de liste */
+    }
+}
+/* ... (votre CSS existant jusqu'à la section .hero-section .hero-video-container video, etc.) ... */
+
+/* Styles pour la liste déroulante des pôles */
+.pole-selector {
+    text-align: center;
+    margin-bottom: var(--spacing-lg); /* Espacement sous la liste déroulante */
+}
+
+.pole-selector select {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border: 1px solid var(--primary-blue);
+    border-radius: var(--border-radius);
+    background-color: #fff;
+    color: var(--dark-blue);
+    cursor: pointer;
+    outline: none;
+    appearance: none; /* Supprime le style par défaut du navigateur */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007bff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13%205.7L146.2%20202.7%2018.7%2075.1a17.6%2017.6%200%200%200-25.3%200c-6.9%206.9-6.9%2018.1%200%2025L133.4%20244a17.6%2017.6%200%200%200%2025.3%200L287%2094.4c6.9-6.8%206.9-18%200-24.9z%22%2F%3E%3C%2Fsvg%3E'); /* Icône de flèche personnalisée */
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 15px;
+    max-width: 350px; /* Limite la largeur */
+    width: 100%;
+}
+
+.pole-selector select:hover {
+    border-color: var(--dark-blue);
+}
+
+.pole-selector select:focus {
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.sr-only { /* Pour cacher visuellement le label tout en le rendant accessible aux lecteurs d'écran */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Styles pour les conteneurs de pôles (gestion de l'affichage par JS) */
+.pole-container {
+    display: none; /* Caché par défaut par CSS */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Transition pour l'apparition */
+}
+
+.pole-container.active {
+    display: grid; /* Sera remis à "grid" par JS quand actif */
+    opacity: 1;
+}
+
+/* Conserver les styles existants pour .services-grid, .service-card etc. */
+.services-grid {
+    display: grid; /* Défini ici et remis à "grid" par JS */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg); /* Garde cette marge pour la grille */
+}
+
+/* Ajustements Responsive pour la liste déroulante des pôles */
+@media (max-width: 768px) {
+    .pole-selector select {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}
+/* ... (votre CSS existant jusqu'à la fin) ... */
+
+/* --- Service Detail Section (pour soins.html) --- */
+.service-detail-section {
+    padding: var(--spacing-xl) 0;
+    background-color: #fff; /* Fond blanc pour cette section */
+}
+
+.service-detail-section .btn-back-to-specialties {
+    background-color: transparent;
+    color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
+    padding: 8px 15px;
+    border-radius: var(--border-radius);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg); /* Marge sous le bouton de retour */
+    display: inline-flex; /* Permet l'icône et le texte sur la même ligne */
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.service-detail-section .btn-back-to-specialties:hover {
+    background-color: var(--primary-blue);
+    color: #fff;
+    text-decoration: none;
+}
+
+.service-detail-section .btn-back-to-specialties i {
+    margin-right: 8px;
+}
+
+.service-detail-section h2.section-title {
+    margin-bottom: var(--spacing-lg);
+    text-align: left; /* Titre aligné à gauche */
+    font-size: 2.8rem;
+}
+
+.service-header-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.service-header-info .info-block {
+    padding: var(--spacing-sm);
+}
+
+.service-header-info .info-block h3 {
+    font-size: 1.1rem;
+    color: var(--dark-blue);
+    margin-bottom: var(--spacing-xs);
+    font-weight: 700;
+}
+
+.service-header-info .info-block p,
+.service-header-info .info-block a {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.service-header-info .action-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.service-header-info .action-block .btn-primary {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-radius: var(--border-radius);
+}
+
+
+.service-intro {
+    margin-bottom: var(--spacing-lg);
+}
+
+.service-intro h4 {
+    margin-bottom: var(--spacing-sm);
+    text-align: left;
+}
+.service-intro p {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.service-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.highlight-card {
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 1px solid var(--medium-gray);
+}
+
+.highlight-card .card-icon {
+    font-size: 2.2rem;
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-sm);
+}
+
+.highlight-card h3 {
+    font-size: 1.4rem;
+    color: var(--dark-blue);
+    margin-bottom: var(--spacing-xs);
+}
+
+.highlight-card p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.service-media {
+    margin-bottom: var(--spacing-lg);
+}
+
+.service-media h4 {
+    margin-top: var(--spacing-md);
+    text-align: left;
+}
+
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: var(--spacing-md);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.service-details-list {
+    margin-bottom: var(--spacing-lg);
+}
+.service-details-list h3 {
+    font-size: 1.6rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--dark-blue);
+}
+.service-details-list ul {
+    list-style: none; /* Supprime les puces par défaut */
+    padding-left: 0;
+}
+.service-details-list ul li {
+    font-size: 1.05rem;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    display: flex; /* Pour aligner l'icône */
+    align-items: flex-start;
+}
+.service-details-list ul li i {
+    color: var(--accent-green); /* Icônes en vert */
+    margin-right: 10px;
+    font-size: 1.1em;
+    flex-shrink: 0; /* Empêche l'icône de se réduire */
+    margin-top: 5px; /* Ajuste la position verticale de l'icône */
+}
+
+.service-details-list p {
+    font-size: 1.05rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.service-team {
+    margin-bottom: var(--spacing-lg);
+}
+
+.service-team h4 {
+    margin-bottom: var(--spacing-sm);
+    text-align: left;
+}
+
+.service-team p {
+    font-size: 1.05rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.team-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.team-member {
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-member i {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-sm);
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 5px;
+    line-height: 1.3;
+}
+.team-member p:first-of-type {
+    font-weight: 600; /* Rendre la fonction (Docteur) plus lisible */
+}
+.team-member p:last-of-type {
+    font-weight: normal; /* Nom normal */
+}
+/* Ajustements Responsive pour la section de détail du service */
+@media (max-width: 992px) {
+    .service-detail-section h2.section-title {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .service-header-info {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+        text-align: center;
+    }
+    .service-header-info .info-block {
+        text-align: center;
+    }
+    .service-header-info .action-block {
+        justify-content: center;
+    }
+    .service-details-list ul {
+        padding-left: 20px; /* Ajouter un peu de padding sur mobile pour les listes */
+    }
+}
+
+@media (max-width: 768px) {
+    .highlight-card {
+        padding: var(--spacing-sm);
+    }
+    .service-highlights {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    }
+    .team-list {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-detail-section h2.section-title {
+        font-size: 2rem;
+    }
+    .service-intro p, .service-details-list p, .service-details-list ul li {
+        font-size: 0.95rem;
+    }
+    .highlight-card h3 {
+        font-size: 1.2rem;
+    }
+    .highlight-card p {
+        font-size: 0.9rem;
+    }
+    .team-member p {
+        font-size: 0.9rem;
+    }
+}
+
+/* ... (votre CSS existant, trouver la section .service-detail-section ou l'ajouter si absente) ... */
+
+/* --- Service Detail Section (pour soins.html) --- */
+.service-detail-section {
+    padding: var(--spacing-xl) 0;
+    background-color: #fff; /* Fond blanc pour cette section */
+}
+
+/* Amélioration de l'intégration des images principales du service */
+.service-detail-section .service-media {
+    margin-bottom: var(--spacing-lg); /* Plus de marge sous le bloc média */
+    /* text-align: center; Supprimé pour laisser Flexbox gérer l'alignement */
+    display: flex; /* Active Flexbox pour aligner image et texte côte à côte */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne sur mobile */
+    gap: var(--spacing-lg); /* Espacement entre l'image et le texte */
+    align-items: center; /* Aligner les éléments au centre verticalement */
+    justify-content: center; /* Centrer le bloc entier */
+}
+
+.service-detail-section .service-media-image-wrapper { /* Nouveau conteneur pour l'image */
+    flex: 1; /* Permet à l'image de prendre de la place */
+    min-width: 300px; /* Largeur minimale avant de passer à la ligne */
+    max-width: 500px; /* Largeur maximale pour l'image */
+    text-align: center; /* Pour centrer l'image si elle est plus petite que son conteneur */
+}
+
+.service-detail-section .service-media img {
+    max-width: 100%; /* L'image ne dépassera jamais la largeur de son conteneur parent (.service-media-image-wrapper) */
+    height: auto; /* Maintient le ratio d'aspect de l'image */
+    display: block;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    margin: 0 auto; /* Centrer l'image à l'intérieur de son wrapper */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Optionnel : un léger effet au survol de l'image si vous voulez plus d'interactivité */
+.service-detail-section .service-media img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.service-detail-section .service-media-text-content { /* Nouveau conteneur pour le texte */
+    flex: 1; /* Permet au texte de prendre de la place */
+    min-width: 300px; /* Largeur minimale avant de passer à la ligne */
+    text-align: left; /* Aligner le texte à gauche */
+}
+
+.service-detail-section .service-media-text-content h4 {
+    margin-top: 0; /* Réinitialiser la marge supérieure */
+    text-align: left; /* Aligner le titre à gauche */
+    font-size: 1.3rem;
+    color: var(--dark-blue);
+    margin-bottom: var(--spacing-xs); /* Marge sous le h4 */
+}
+
+.service-detail-section .service-media-text-content p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-top: 0; /* Réinitialiser la marge supérieure */
+    margin-bottom: var(--spacing-sm); /* Marge sous le paragraphe */
+    text-align: left; /* Aligner le paragraphe à gauche */
+}
+
+/* Ajustements Responsive pour la section de détail du service */
+@media (max-width: 992px) {
+    /* ... (vos styles existants) ... */
+    .service-detail-section .service-media {
+        flex-direction: column; /* Reviens à une colonne sur tablette */
+    }
+    .service-detail-section .service-media-image-wrapper,
+    .service-detail-section .service-media-text-content {
+        min-width: unset; /* Réinitialise le min-width */
+        max-width: 100%; /* Prend toute la largeur */
+        text-align: center; /* Centre le contenu */
+    }
+    .service-detail-section .service-media-text-content h4,
+    .service-detail-section .service-media-text-content p {
+        text-align: center; /* Centrer le texte sur mobile */
+    }
+}
+/* Ajoutez ce CSS à votre fichier style.css ou à un fichier CSS personnalisé chargé après style.css */
+
+.btn-recommendations {
+    display: inline-block;
+    font-weight: 600; /* Plus gras comme les boutons Bootstrap */
+    line-height: 1.5;
+    color: #fff; /* Texte blanc */
+    background-color: #28a745; /* Vert */
+    border: 1px solid #28a745; /* Bordure verte */
+    padding: 14px 30px; /* Ajusté pour correspondre au padding des autres boutons */
+    font-size: 1rem;
+    border-radius: 50px; /* Rend le bouton arrondi (pill-shaped) */
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Transition pour tous les changements */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Ombre douce comme les autres */
+}
+
+.btn-recommendations:hover {
+    color: #fff;
+    background-color: #218838; /* Vert plus foncé au survol */
+    border-color: #1e7e34; /* Bordure plus foncée */
+    text-decoration: none;
+    transform: translateY(-1px); /* Léger soulèvement pour l'effet de clic */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15); /* Ombre plus prononcée au survol */
+}
+
+.btn-recommendations:focus,
+.btn-recommendations:active {
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25); /* Ombre au focus pour accessibilité */
+}
+/* Styles pour la nouvelle carte CTA "Voir tous les services" */
+.service-card.service-card-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column; /* Pour centrer le contenu verticalement */
+    min-height: 250px; /* Assurez une hauteur minimale pour qu'elle s'aligne bien si le contenu est court */
+}
+
+.service-card.service-card-cta .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.service-card.service-card-cta i {
+    font-size: 3em; /* Grande icône */
+    color: var(--primary-blue); /* Couleur primaire */
+    margin-bottom: 20px;
+}
+
+.service-card.service-card-cta h3 {
+    font-size: 1.5em;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+}
+
+.service-card.service-card-cta p {
+    font-size: 1em;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+/* S'assurer que le bouton est grand */
+.service-card-cta .btn-primary.btn-lg {
+    padding: 15px 30px; /* Plus grand padding pour le bouton */
+    font-size: 1.25rem; /* Plus grande taille de police */
+    border-radius: 50px; /* Pour le rendre pill-shaped */
+}
+/* Nouveau dossier/style.css */
+
+/* ... (votre CSS existant) ... */
+
+/* Styles pour la grille des services (utilise CSS Grid) */
+.services-grid {
+    display: grid;
+    /* Colonnes responsives: 1 colonne par défaut, 2 sur écrans moyens, 3 sur grands écrans */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md); /* Espacement entre les cartes */
+    align-items: stretch; /* Assure que les éléments s'étirent en hauteur dans leur cellule */
+}
+
+/* Ajustement pour les écrans de taille moyenne (2 colonnes) */
+@media (min-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Ajustement pour les grands écrans (3 colonnes) */
+@media (min-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /* Positionnement et extension de la carte CTA sur les grands écrans */
+    .services-grid .service-card-cta {
+        grid-column: 3; /* Place la carte dans la 3ème colonne */
+        grid-row: 1 / span 2; /* Commence à la 1ère ligne et s'étend sur 2 lignes */
+        /* Cela la placera à droite de la 2ème carte et s'étendra pour combler le vide */
+    }
+}
+
+/* Styles pour la nouvelle carte CTA "Voir tous les services" */
+.service-card.service-card-cta {
+    /* Le display:flex, align-items, justify-content sont déjà définis dans le CSS fourni précédemment */
+    /* Assurez-vous que ces styles sont présents pour un centrage parfait du contenu */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    /* La hauteur sera gérée par grid-row: span 2; */
+}
+
+.service-card.service-card-cta .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.service-card.service-card-cta i {
+    font-size: 3em;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+}
+
+.service-card.service-card-cta h3 {
+    font-size: 1.5em;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+}
+
+.service-card.service-card-cta p {
+    font-size: 1em;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.service-card-cta .btn-primary.btn-lg {
+    padding: 15px 30px;
+    font-size: 1.25rem;
+    border-radius: 50px;
+}
+/* CSS pour faire pivoter la flèche du dropdown (Font Awesome) */
+
+/* La flèche pointe vers le haut par défaut */
+.main-nav .dropdown .fas.fa-chevron-down {
+    transform: rotate(180deg); /* La flèche pointe vers le haut par défaut */
+    transition: transform 0.3s ease-in-out; /* Transition douce pour l'animation */
+}
+
+/* Lorsque le menu est activé, la flèche pointe vers le bas */
+.main-nav .dropdown a.active-dropdown-link .fas.fa-chevron-down {
+    transform: rotate(0deg); /* La flèche pointe vers le bas quand le menu est ouvert */
+}
+
+/* Optionnel : Si vous utilisez aussi des dropdowns Bootstrap natifs qui ajoutent aria-expanded="true" */
+.main-nav .dropdown a.dropdown-toggle[aria-expanded="true"] .fas.fa-chevron-down {
+    transform: rotate(0deg);
+}
+
+/* Optionnel : Pour les dropdowns au survol sur desktop (si la classe 'show' est appliquée au parent LI) */
+.main-nav .dropdown.show .fas.fa-chevron-down {
+    transform: rotate(0deg);
+}
+/* CSS pour la section Annuaire des services sur soins.html */
+
+/* CSS pour la section Annuaire des services sur soins.html */
+
+/* Conteneur principal de la recherche/filtre */
+.annuaire-search-filter-box {
+    background-color: #f8f9fa; /* Couleur de fond légère */
+    border: 1px solid #dee2e6; /* Bordure légère */
+    padding: 25px; /* Padding autour des éléments */
+    border-radius: var(--border-radius); /* Rayon de bordure de base */
+    margin-bottom: 40px; /* Marge en dessous pour séparer des résultats */
+}
+
+/* Conteneur de la ligne des contrôles de l'annuaire */
+.annuaire-controls-row {
+    display: flex; /* Force Flexbox */
+    flex-wrap: nowrap !important; /* TRÈS IMPORTANT : Empêche les éléments de passer à la ligne */
+    align-items: flex-end; /* Aligne les éléments en bas (pour les boutons) */
+    gap: 15px; /* Espace entre les éléments */
+    overflow-x: auto; /* Permet le défilement horizontal si le contenu dépasse */
+    padding-bottom: 10px; /* Espace pour la barre de défilement (si elle apparaît) */
+}
+
+/* Groupes de champs (recherche, filtre, boutons) */
+.annuaire-search-input-group,
+.annuaire-filter-select-group,
+.annuaire-buttons-group {
+    flex-shrink: 0; /* Empêche les éléments de rétrécir plus que leur contenu min-width */
+    /* Ces min-width garantissent que les champs restent lisibles même sur une seule ligne */
+    min-width: 200px; /* Largeur minimale pour les champs de texte/select */
+}
+/* Largeur spécifique pour le champ de recherche */
+.annuaire-search-input-group {
+    min-width: 280px; /* Plus large pour la recherche */
+}
+/* Pas de min-width sur le groupe de boutons, il prendra la largeur de son contenu */
+.annuaire-buttons-group {
+    margin-left: auto; /* Pousse les boutons à droite si l'espace est suffisant */
+}
+
+
+/* Styles pour les champs de texte et les sélecteurs */
+.annuaire-input {
+    border-radius: var(--border-radius); /* Garde le style arrondi */
+    padding: 0.75rem 1rem; /* Padding pour une meilleure hauteur */
+    height: calc(1.5em + 1.5rem + 2px); /* Hauteur standard pour aligner avec les boutons */
+    border: 1px solid #ced4da; /* Bordure par défaut */
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.075); /* Ombre interne légère */
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    width: 100%; /* S'assure que l'input remplit son groupe */
+    background-color: #fff; /* Fond blanc */
+}
+
+.annuaire-input:focus {
+    border-color: var(--primary-blue); /* Couleur de bordure au focus */
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25); /* Ombre de focus Bootstrap */
+}
+
+/* Styles pour les labels */
+.annuaire-search-filter-box .form-label {
+    font-weight: 600; /* Plus épais */
+    color: var(--text-color); /* Couleur de texte sombre */
+    font-size: 0.9em; /* Plus petit */
+    display: block; /* S'assure que le label est au-dessus du champ */
+    margin-bottom: 0.25rem; /* Réduit l'espace entre label et champ */
+    white-space: nowrap; /* Empêche le label de passer à la ligne */
+}
+
+
+/* Styles pour le bouton principal "LANCER UNE RECHERCHE" */
+.annuaire-main-btn {
+    background-color: #0d47a1; /* Bleu foncé de l'image, ou var(--primary-blue) */
+    border-color: #0d47a1;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    height: calc(1.5em + 1.5rem + 2px); /* Hauteur standard pour aligner avec les champs */
+    min-width: 150px;
+    white-space: nowrap; /* Empêche le texte du bouton de passer à la ligne */
+}
+
+.annuaire-main-btn:hover {
+    background-color: #0a3d82; /* Plus foncé au survol */
+    border-color: #0a3d82;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles pour le bouton icône de réinitialisation/recherche */
+.annuaire-icon-btn {
+    background-color: #fff; /* Fond blanc */
+    border: 1px solid #0d47a1; /* Bordure bleue foncée */
+    color: #0d47a1; /* Icône bleue foncée */
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius);
+    transition: all 0.2s ease;
+    height: calc(1.5em + 1.5rem + 2px);
+    width: 50px; /* Largeur fixe pour le bouton carré */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.annuaire-icon-btn:hover {
+    background-color: #0d47a1; /* Fond bleu foncé au survol */
+    color: #fff; /* Icône blanche au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Texte du nombre de résultats */
+.annuaire-results-info {
+    font-size: 1.1em;
+    color: var(--text-color);
+    font-weight: bold;
+    margin-top: 15px; /* Espace après les contrôles */
+}
+
+/* Correction pour les list-item dans service-list pour la section Annuaire */
+.service-list .list-item {
+    background-color: #fff;
+    border-left: 5px solid var(--primary-blue);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: var(--spacing-sm);
+}
+
+.service-list .list-item h3 {
+    color: var(--dark-blue);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.service-list .list-item p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+.service-list .list-item p:last-child {
+    margin-bottom: 0;
+}
+/* MEGAMENU.CSS - Version finale avec alignement corrigé */
+/* =================================================================
+/* =================================================================
+   AJOUTS POUR LE MÉGAMENU BOOTSTRAP - VERSION CORRIGÉE
+   ================================================================= */
+
+/* ÉTAPE 1: Forcer l'élément de liste à ne pas influencer la position du menu. */
+.navbar .nav-item.dropdown-mega {
+    position: static;
+}
+
+/* ÉTAPE 2: Positionner le mégamenu par rapport à la page entière. */
+.dropdown-mega .mega-menu {
+    width: 85vw;           /* Le menu prend 85% de la largeur de la fenêtre */
+    max-width: 1140px;     /* Mais ne dépasse pas 1140px */
+    padding: 30px;
+    
+    /* Technique de centrage absolu qui fonctionnera à coup sûr */
+    left: 20%;
+}
+
+/* ÉTAPE 3: Styliser les titres des colonnes à l'intérieur du menu. */
+.mega-menu-title {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--dark-blue); /* Assurez-vous que cette variable CSS existe */
+    border-bottom: 2px solid var(--primary-blue); /* Assurez-vous que cette variable CSS existe */
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+.dropdown-mega .mega-menu .img-fluid {
+    width: 100%;
+    max-height: 150px; /* Ajustez cette valeur si nécessaire */
+    object-fit: cover; /* Pour que l'image remplisse l'espace sans se déformer */
+    border-radius: 0.25rem; /* Ou une autre valeur de bordure */
+}
+/* Dans votre style.css */
+.top-bar-btn {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-left: 10px; /* Espace entre les boutons */
+}
+
+.top-bar-btn.btn-danger {
+    background-color: #dc3545; /* Rouge Bootstrap */
+    color: white;
+    border: 1px solid #dc3545;
+}
+.top-bar-btn.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.top-bar-btn.btn-info-outline { /* Nouvelle classe pour le bouton "Nous rejoindre" */
+    background-color: transparent;
+    color: #17a2b8; /* Couleur info de Bootstrap */
+    border: 1px solid #17a2b8;
+}
+.top-bar-btn.btn-info-outline:hover {
+    background-color: #17a2b8;
+    color: white;
+}

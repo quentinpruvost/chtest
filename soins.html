@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offre de Soins - Centre Hospitalier de </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="top-bar" id="topBarPlaceholder"></div>
+    <header class="main-header" id="mainHeaderPlaceholder"></header>
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-bar">
+            <input type="text" placeholder="Rechercher sur le site..." id="searchInput">
+            <button type="submit"><i class="fas fa-search"></i></button>
+            <button class="close-search" id="closeSearch"><i class="fas fa-times"></i></button>
+        </div>
+    </div>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Notre Offre de Soins</h1>
+            <p>Découvrez l'ensemble des spécialités médicales et services disponibles au Centre Hospitalier de .</p>
+        </div>
+    </section>
+
+    <section id="specialites-overview" class="content-section">
+        <div class="container">
+            <h2 class="section-title text-left">Nos spécialités médicales et chirurgicales</h2>
+            <p class="section-description text-left">Le Centre Hospitalier propose une offre de soins diversifiée pour répondre aux besoins de santé de la population. Sélectionnez un pôle ou cliquez sur un service pour en savoir plus.</p>
+
+            <div class="pole-selector">
+                <label for="pole-select" class="sr-only">Sélectionnez un pôle :</label>
+                <select id="pole-select">
+                    <option value="all">Toutes les spécialités</option>
+                    <option value="medicotechnique">Pôle Médico-technique</option>
+                    <option value="geriatrie">Pôle Gériatrie</option> <option value="femme-mere-enfant">Pôle Femme, Mère & Enfant</option>
+                    <option value="chirurgie">Pôle Chirurgie</option>
+                </select>
+            </div>
+
+            <div id="all-poles-container" class="services-grid pole-container active">
+                <div class="service-card" data-service="pediatrie" data-pole="femme-mere-enfant">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-baby"></i></div>
+                    <h3>Pédiatrie</h3>
+                    <p>Prise en charge médicale des enfants de la naissance à l'adolescence.</p>
+                    <a href="#" class="btn-link view-service-btn" data-target-service="pediatrie">En savoir plus</a>
+                </div>
+                <div class="service-card" data-service="imagerie" data-pole="medicotechnique">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-x-ray"></i></div>
+                    <h3>Imagerie Médicale</h3>
+                    <p>Radiologie, Scanner, IRM : des équipements de pointe pour un diagnostic précis.</p>
+                    <a href="#" class="btn-link view-service-btn" data-target-service="imagerie">En savoir plus</a>
+                </div>
+                <div class="service-card" data-service="geriatrie" data-pole="geriatrie">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-user-nurse"></i></div>
+                    <h3>Gériatrie & EHPAD</h3>
+                    <p>Accompagnement et soins spécialisés pour les personnes âgées, en hospitalisation ou en résidence.</p>
+                    <a href="#" class="btn-link view-service-btn" data-target-service="geriatrie">En savoir plus</a>
+                </div>
+                <div class="service-card" data-service="cardiologie" data-pole="medecine"> <div class="icon-wrapper small-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Cardiologie</h3>
+                    <p>Prévention, diagnostic et traitement des maladies cardiovasculaires par une équipe experte.</p>
+                    <a href="#" class="btn-link view-service-btn" data-target-service="cardiologie">En savoir plus</a>
+                </div>
+                <div class="service-card" data-service="neurologie" data-pole="medecine"> <div class="icon-wrapper small-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Neurologie</h3>
+                    <p>Prise en charge des affections du système nerveux central et périphérique.</p>
+                    <a href="#" class="btn-link view-service-btn" data-target-service="neurologie">En savoir plus</a>
+                </div>
+                <div class="service-card" data-service="orthopedie" data-pole="chirurgie">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-bone"></i></div>
+                    <h3>Orthopédie</h3>
+                    <p>Chirurgie des os et articulations, traumatologie, rééducation fonctionnelle.</p>
+                    <a href="#" class="btn-link view-service-btn" data-target-service="orthopedie">En savoir plus</a>
+                </div>
+                <div class="service-card" data-service="pneumologie" data-pole="medecine"> <div class="icon-wrapper small-icon"><i class="fas fa-lungs"></i></div>
+                    <h3>Pneumologie</h3>
+                    <p>Diagnostic et traitement des affections respiratoires.</p>
+                    <a href="#" class="btn-link view-service-btn" data-target-service="pneumologie">En savoir plus</a>
+                </div>
+                <div class="service-card" data-service="laboratoire" data-pole="medicotechnique">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-flask"></i></div>
+                    <h3>Laboratoire d'Analyses Médicales</h3>
+                    <p>Analyses sanguines, urinaires et autres examens biologiques pour le diagnostic.</p>
+                    <a href="#" class="btn-link view-service-btn" data-target-service="laboratoire">En savoir plus</a>
+                </div>
+                <div class="service-card" data-service="addictologie" data-pole="medecine"> <div class="icon-wrapper small-icon"><i class="fas fa-syringe"></i></div>
+                    <h3>Addictologie</h3>
+                    <p>Accompagnement et prise en charge des dépendances.</p>
+                    <a href="#" class="btn-link view-service-btn" data-target-service="addictologie">En savoir plus</a>
+                </div>
+                <div class="service-card" data-service="diabetologie" data-pole="medecine"> <div class="icon-wrapper small-icon"><i class="fas fa-solid-cane"></i></div>
+                    <h3>Diabétologie & Endocrinologie</h3>
+                    <p>Suivi et traitement des maladies métaboliques et hormonales.</p>
+                    <a href="#" class="btn-link view-service-btn" data-target-service="diabetologie">En savoir plus</a>
+                </div>
+                <div class="service-card" data-service="maternite" data-pole="femme-mere-enfant">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-baby"></i></div>
+                    <h3>Maternité</h3>
+                    <p>Suivi de grossesse, accouchement, et soins post-nataux.</p>
+                    <a href="#" class="btn-link view-service-btn" data-target-service="maternite">En savoir plus</a>
+                </div>
+                <div class="service-card" data-service="gynecologie" data-pole="femme-mere-enfant">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-clinic-medical"></i></div>
+                    <h3>Gynécologie</h3>
+                    <p>Consultations et soins spécifiques à la santé de la femme.</p>
+                    <a href="#" class="btn-link view-service-btn" data-target-service="gynecologie">En savoir plus</a>
+                </div>
+                <div class="service-card" data-service="chirurgie-generale" data-pole="chirurgie">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-user-doctor"></i></div>
+                    <h3>Chirurgie Générale & Viscérale</h3>
+                    <p>Interventions chirurgicales sur les organes de l'abdomen et digestifs.</p>
+                    <a href="#" class="btn-link view-service-btn" data-target-service="chirurgie-generale">En savoir plus</a>
+                </div>
+                <div class="service-card" data-service="neurochirurgie" data-pole="chirurgie">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Neurochirurgie (partenariat)</h3>
+                    <p>Interventions chirurgicales sur le cerveau et la colonne vertébrale.</p>
+                    <a href="#" class="btn-link view-service-btn" data-target-service="neurochirurgie">En savoir plus</a>
+                </div>
+                <div class="service-card" data-service="urologie" data-pole="chirurgie">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-bladder"></i></div>
+                    <h3>Urologie (partenariat)</h3>
+                    <p>Chirurgie des voies urinaires et de l'appareil génital masculin.</p>
+                    <a href="#" class="btn-link view-service-btn" data-target-service="urologie">En savoir plus</a>
+                </div>
+            </div>
+
+            <div id="medicotechnique-container" class="services-grid pole-container">
+                <div class="service-card" data-service="imagerie" data-pole="medicotechnique">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-x-ray"></i></div>
+                    <h3>Imagerie Médicale</h3>
+                    <p>Radiologie, Scanner, IRM : des équipements de pointe pour un diagnostic précis.</p>
+                    <a href="#" class="btn-link view-service-btn" data-target-service="imagerie">Détails Imagerie</a>
+                </div>
+                <div class="service-card" data-service="laboratoire" data-pole="medicotechnique">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-flask"></i></div>
+                    <h3>Laboratoire d'Analyses Médicales</h3>
+                    <p>Réalisation d'analyses biologiques pour le diagnostic et le suivi.</p>
+                    <a href="#" class="btn-link view-service-btn" data-target-service="laboratoire">Détails Laboratoire</a>
+                </div>
+                <div class="service-card" data-service="anatomie-pathologique" data-pole="medicotechnique">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-microscope"></i></div>
+                    <h3>Anatomie et Cytologie Pathologiques</h3>
+                    <p>Analyse des tissus et cellules pour le diagnostic des maladies.</p>
+                    <a href="#" class="btn-link">Détails ACP</a>
+                </div>
+            </div>
+
+            <div id="geriatrie-container" class="services-grid pole-container">
+                <div class="service-card" data-service="geriatrie" data-pole="geriatrie">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-user-nurse"></i></div>
+                    <h3>Gériatrie</h3>
+                    <p>Prise en charge globale des personnes âgées, soins de suite et de réadaptation.</p>
+                    <a href="#" class="btn-link view-service-btn" data-target-service="geriatrie">Détails Gériatrie</a>
+                </div>
+                <div class="service-card" data-service="ehpad" data-pole="geriatrie">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-hospital-user"></i></div>
+                    <h3>EHPAD Les 7 Sources</h3>
+                    <p>Hébergement et accompagnement médicalisé pour personnes âgées dépendantes.</p>
+                    <a href="annexe.html#ehpad" class="btn-link">Détails EHPAD</a>
+                </div>
+                <div class="service-card" data-service="ssiad" data-pole="geriatrie">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-home"></i></div>
+                    <h3>SSIAD</h3>
+                    <p>Service de Soins Infirmiers À Domicile pour maintenir l'autonomie.</p>
+                    <a href="annexe.html#ssiad" class="btn-link">Détails SSIAD</a>
+                </div>
+            </div>
+
+            <div id="femme-mere-enfant-container" class="services-grid pole-container">
+                <div class="service-card" data-service="maternite" data-pole="femme-mere-enfant">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-baby"></i></div>
+                    <h3>Maternité</h3>
+                    <p>Suivi de grossesse, accouchement, et soins post-nataux.</p>
+                    <a href="#" class="btn-link view-service-btn" data-target-service="maternite">Détails Maternité</a>
+                </div>
+                <div class="service-card" data-service="pediatrie" data-pole="femme-mere-enfant">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-child"></i></div>
+                    <h3>Pédiatrie</h3>
+                    <p>Prise en charge médicale des enfants de la naissance à l'adolescence.</p>
+                    <a href="#" class="btn-link view-service-btn" data-target-service="pediatrie">Détails Pédiatrie</a>
+                </div>
+                <div class="service-card" data-service="gynecologie" data-pole="femme-mere-enfant">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-clinic-medical"></i></div>
+                    <h3>Gynécologie</h3>
+                    <p>Consultations et soins spécifiques à la santé de la femme.</p>
+                    <a href="#" class="btn-link view-service-btn" data-target-service="gynecologie">Détails Gynécologie</a>
+                </div>
+                <div class="service-card" data-service="camsp" data-pole="femme-mere-enfant">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-child-reaching"></i></div>
+                    <h3>CAMSP</h3>
+                    <p>Centre d'Action Médico-Sociale Précoce pour les enfants de 0 à 6 ans.</p>
+                    <a href="annexe.html#camsp" class="btn-link">Détails CAMSP</a>
+                </div>
+                <div class="service-card" data-service="pco" data-pole="femme-mere-enfant">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-brain"></i></div>
+                    <h3>PCO</h3>
+                    <p>Plateforme de Coordination et d'Orientation pour troubles neuro-développementaux.</p>
+                    <a href="annexe.html#pco" class="btn-link">Détails PCO</a>
+                </div>
+            </div>
+
+            <div id="chirurgie-container" class="services-grid pole-container">
+                <div class="service-card" data-service="chirurgie-generale" data-pole="chirurgie">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-user-doctor"></i></div>
+                    <h3>Chirurgie Générale & Viscérale</h3>
+                    <p>Interventions chirurgicales sur les organes de l'abdomen et digestifs.</p>
+                    <a href="#" class="btn-link view-service-btn" data-target-service="chirurgie-generale">Détails Chirurgie Générale</a>
+                </div>
+                <div class="service-card" data-service="orthopedie" data-pole="chirurgie">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-bone"></i></div>
+                    <h3>Chirurgie Orthopédique & Traumatologique</h3>
+                    <p>Opérations des os, articulations, ligaments et muscles.</p>
+                    <a href="#" class="btn-link view-service-btn" data-target-service="orthopedie">Détails Orthopédie</a>
+                </div>
+                <div class="service-card" data-service="neurochirurgie" data-pole="chirurgie">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Neurochirurgie (partenariat)</h3>
+                    <p>Interventions chirurgicales sur le cerveau et la colonne vertébrale.</p>
+                    <a href="#" class="btn-link view-service-btn" data-target-service="neurochirurgie">Détails Neurochirurgie</a>
+                </div>
+                <div class="service-card" data-service="urologie" data-pole="chirurgie">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-bladder"></i></div>
+                    <h3>Urologie (partenariat)</h3>
+                    <p>Chirurgie des voies urinaires et de l'appareil génital masculin.</p>
+                    <a href="#" class="btn-link view-service-btn" data-target-service="urologie">Détails Urologie</a>
+                </div>
+            </div>
+
+            </div>
+    </section>
+
+    <section id="service-detail-section" class="service-detail-section content-section" style="display:none;">
+        <div class="container">
+            <button class="btn-back-to-specialties" id="backToSpecialtiesBtn">
+                <i class="fas fa-arrow-left"></i> Retour aux spécialités
+            </button>
+            <div id="service-content-area">
+            </div>
+        </div>
+    </section>
+<section id="services" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title text-left">Annuaire des services</h2>
+            <p class="section-description text-left">Retrouvez facilement les coordonnées et missions de nos principaux services et unités grâce à notre annuaire interactif.</p>
+
+            <div class="annuaire-search-filter-box">
+                <div class="annuaire-controls-row d-flex align-items-end"> 
+                    <div class="annuaire-search-input-group">
+                        <label for="annuaireSearchInput" class="form-label mb-1">Rechercher</label>
+                        <input type="text" class="form-control annuaire-input" id="annuaireSearchInput" placeholder="Rechercher">
+                    </div>
+
+                    <div class="annuaire-filter-select-group">
+                        <label for="annuaireFilterService" class="form-label mb-1">Filtrer par service</label>
+                        <select class="form-select annuaire-input" id="annuaireFilterService">
+                            <option value="all" selected>- Tous les services -</option>
+                            </select>
+                    </div>
+
+                </div>
+                <div class="row mt-3">
+                    <div class="col">
+                        <p class="annuaire-results-info"><span id="annuaireResultsCount">0</span> résultats pour votre recherche</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="annuaire-results-container" class="service-list mt-4">
+                </div>
+        </div>
+    </section>
+
+    <section id="plateau" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title text-left">Plateau technique</h2>
+            <div class="content-grid reverse-grid">
+                <div class="content-text">
+                    <p>Notre plateau technique est équipé d'installations modernes et performantes pour garantir des diagnostics précis et des traitements efficaces.</p>
+                    <h3>Équipements majeurs :</h3>
+                    <ul>
+                        <li><i class="fas fa-scanner-medical"></i> Imagerie par Résonance Magnétique (IRM)</li>
+                        <li><i class="fas fa-microscope"></i> Scanners (3 scanners disponibles sur différents sites)</li>
+                        <li><i class="fas fa-heart-pulse"></i> Salles de radiologie à capteur plan</li>
+                        <li><i class="fas fa-teeth-open"></i> Panoramique dentaire</li>
+                        <li><i class="fas fa-dna"></i> Laboratoire d'analyses médicales</li>
+                    </ul>
+                    <p>Nous investissons continuellement dans les dernières technologies pour offrir le meilleur à nos patients.</p>
+                    <a href="#" class="btn-link">Découvrir nos équipements</a>
+                </div>
+                <div class="content-image">
+                    <img src="images/plateau_technique.jpg" alt="Équipements médicaux modernes">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <footer class="main-footer" id="mainFooterPlaceholder"></footer>
+
+    <script src="annuaire-interactivite.js"></script>
+
+    <script src="soins-interactivite.js"></script> <script src="script.js"></script>
+</body>
+</html>

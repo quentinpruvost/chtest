@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patients & Visiteurs - Centre Hospitalier </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="top-bar" id="topBarPlaceholder"></div>
+    <header class="main-header" id="mainHeaderPlaceholder"></header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Patients & Visiteurs</h1>
+            <p>Toutes les informations essentielles pour préparer votre venue, votre séjour et faciliter votre parcours au Centre Hospitalier.</p>
+        </div>
+    </section>
+
+    <section id="preparation" class="content-section">
+        <div class="container">
+            <h2 class="section-title text-left">Préparer votre venue</h2>
+            <div class="content-grid">
+                <div class="content-text">
+                    <p>Pour faciliter votre admission et votre prise en charge, voici quelques informations importantes à connaître avant votre arrivée à l'hôpital.</p>
+                    <h3>Que devez-vous apporter ?</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Votre pièce d'identité (carte d'identité, passeport, titre de séjour).</li>
+                        <li><i class="fas fa-check-circle"></i> Votre carte Vitale ou attestation de droits à l'Assurance Maladie.</li>
+                        <li><i class="fas fa-check-circle"></i> Votre carte de mutuelle ou d'attestation de complémentaire santé.</li>
+                        <li><i class="fas fa-check-circle"></i> Vos ordonnances de traitement en cours et médicaments.</li>
+                        <li><i class="fas fa-check-circle"></i> Tout document médical pertinent (examens récents, courriers de votre médecin traitant).</li>
+                    </ul>
+                    <h3>Horaires d'accueil :</h3>
+                    <p>Le Centre Hospitalier est ouvert :</p>
+                    <ul>
+                        <li>Du lundi au vendredi : De 7h45 à 20h00</li>
+                        <li>Le week-end et jours fériés : De 8h à 20h00</li>
+                    </ul>
+                    <a href="#" class="btn-link">En savoir plus sur l'admission</a>
+                </div>
+                <div class="content-image">
+                    <img src="images/patient_accueil.jpg" alt="Accueil patient">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sejour" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title text-left">Votre séjour à l'hôpital</h2>
+            <p class="section-description text-left">Pour rendre votre séjour aussi agréable que possible, nous vous informons sur les services et règles en vigueur.</p>
+
+            <div class="accordion-container">
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <h3><i class="fas fa-users"></i> Accompagnants</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Un accompagnant peut être autorisé à rester près de vous dans la mesure des possibilités d'accueil du service. En prévenant à l'avance, il a la possibilité de prendre ses repas en votre compagnie. À cet effet, il doit acheter un ticket repas au Bureau des admissions et le remettre le jour même à l'équipe soignante avant 10h pour le déjeuner et avant 16h pour le dîner. Les tarifs en vigueur sont affichés en chambre.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <h3><i class="fas fa-comments"></i> Aides linguistiques</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Vous avez la possibilité de faire appel à un interlocuteur parlant une des langues suivantes : Allemand, Anglais, Arabe, Espagnol, Italien. Renseignez-vous auprès du cadre de santé.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <h3><i class="fas fa-handshake-angle"></i> Associations</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Des associations de bénévoles, autorisées par la Direction du Centre Hospitalier peuvent se présenter à vous et vous proposer un accompagnement, un soutien scolaire (pour les enfants hospitalisés), une animation...</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <h3><i class="fas fa-volume-mute"></i> Bruit</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Pour préserver le silence et le repos de tous, il vous est demandé d'user avec discrétion des appareils de radio et de télévision, de limiter le nombre de visites et d'éviter les conversations bruyantes par égard pour les autres patients.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <h3><i class="fas fa-envelope-open-text"></i> Courrier</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Le courrier vous est distribué et relevé chaque jour dans le service. Une boîte aux lettres est également à votre disposition dans le hall d'entrée de l'établissement.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <h3><i class="fas fa-church"></i> Cultes</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Vous avez la possibilité de demander au cadre de santé ou au standard téléphonique de faire venir un ministre du culte de votre religion.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <h3><i class="fas fa-vault"></i> Dépôt de bijoux et de valeurs (argent, moyens de paiement)</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Nous vous conseillons de ne pas conserver sur vous des objets de valeur et de les déposer au Bureau des Admissions contre récépissé.</p>
+                        <p><strong>Attention :</strong> Si vous êtes hospitalisé(e) plus de 48 h, votre dépôt sera transféré au Trésor Public de Bagnols. Pour les modalités de retrait, renseignez-vous auprès du Bureau des admissions ou du cadre de santé du service.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <h3><i class="fas fa-child"></i> Hospitalisation des enfants mineurs</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Le consentement express et écrit aux soins et aux interventions chirurgicales des mineurs appartient aux détenteurs de l'autorité parentale, père, mère ou tuteur légal. En cas d'urgence, les interventions chirurgicales sont autorisées par la loi, notamment en cas d'impossibilité de joindre les parents. L'urgence de cette intervention sera attestée par la rédaction d'un certificat médical circonstancié, signé par deux médecins. Dans l'hypothèse où il apparaît aux médecins que le refus du représentant légal du mineur ou l'impossibilité de recueillir son consentement, risque de compromettre la santé ou l'intégrité corporelle du mineur, le médecin responsable du service peut saisir le ministère public afin de provoquer les mesures d'assistance éducative permettant de donner les soins qui s'imposent. L'hôpital assure alors, par délégation, l'autorité parentale et doit en assumer la responsabilité tout au long du séjour du mineur à l'hôpital.</p>
+                        <p>La loi permet au mineur de s'opposer à l'accès de ses parents à son dossier médical ou à la connaissance de toutes informations médicales le concernant. Après avoir essayé de le faire changer d'avis, le médecin peut (et non doit) décider de prodiguer les soins au mineur sans consultation des titulaires de l'autorité parentale. Dans ce dernier cas, le mineur doit se faire accompagner d'une personne majeure de son choix. Le médecin prend cette décision en fonction de l'intérêt de l'enfant et non contre les parents.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <h3><i class="fas fa-tshirt"></i> Linge</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Pour votre séjour, prévoyez votre nécessaire de toilette (serviette et gant de toilette, savon, brosse à dent et dentifrice, peigne…), ainsi que vos effets personnels (linge de nuit, robe de chambre, chaussons, serviette de table…).</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <h3><i class="fas fa-parking"></i> Parking</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Un parking visiteurs est à la disposition des usagers et des places pour personnes handicapées leur sont réservées. Merci de les respecter.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <h3><i class="fas fa-gavel"></i> Protection juridique des majeurs protégés</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>En cas d'incapacité totale ou partielle, une mesure de protection peut être envisagée à votre demande, à celle d'un tiers ou d'un médecin, auprès du juge des tutelles. Ce dernier décidera de la mesure de protection la plus adaptée à votre état de santé : tutelle, curatelle ou sauvegarde de justice. Si vous êtes déjà sous mesure de protection, votre représentant légal sera informé.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <h3><i class="fas fa-headset"></i> Prothèses</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Si vous portez des lunettes, lentilles, prothèse dentaire ou auditive : pensez à prévoir les produits nécessaires à leur entretien et aux moyens de les ranger soigneusement afin d'éviter les risques de perte.</p>
+                        <p>Pendant votre séjour, ces objets sont sous votre entière responsabilité.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <h3><i class="fas fa-utensils"></i> Repas</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Votre alimentation est adaptée à votre état de santé grâce à la présence d'un service diététique.</p>
+                        <p>Le petit déjeuner est servi à 8h, le déjeuner à 12h, le goûter à 15h et le dîner à 19h.</p>
+                        <p>Le repas est un moment privilégié qui fait partie du projet de soin.</p>
+                        <p>Afin d'améliorer la prise en charge nutritionnelle, un Comité de Liaison Alimentation Nutrition (CLAN) est actif dans l'établissement. Il a pour fonction d'harmoniser l'action des différents intervenants en vue d'améliorer la prestation alimentaire sur un plan gustatif et thérapeutique, tout en respectant les règles de sécurité alimentaire.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <h3><i class="fas fa-plug"></i> Sécurité électrique</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Il est interdit d'apporter des appareils électriques personnels.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <h3><i class="fas fa-mobile-alt"></i> Téléphone</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Les chambres sont toutes équipées d'un poste téléphonique avec une ligne directe et un numéro d'appel personnel. Pour appeler vos correspondants, un code personnel vous sera remis après paiement d'une avance non remboursable au Bureau des admissions.</p>
+                        <p>En raison des risques d'interférences électromagnétiques avec les équipements médicaux, l'usage des téléphones mobiles est interdit dans l'Établissement (lettre circulaire n°40 du 9 octobre 1995).</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <h3><i class="fas fa-tv"></i> Télévision</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Cette prestation est confiée à une société extérieure.</p>
+                        <p>Vous pouvez activer vos abonnements auprès de l’hôtesse TV au niveau du Hall d'entrée de l’hôpital, du Lundi au Vendredi de 11H à 18H ou par téléphone au 09 69 32 09 93 (appel gratuit & paiement CB uniquement).</p>
+                        <p>Tarif: 4,50€/jour.</p>
+                        <p>En pédiatrie, l'accès à la télévision est gratuit.</p>
+                    </div>
+                </div>
+
+            </div> </div>
+    </section>
+
+    <section id="depart" class="content-section">
+        <div class="container">
+            <h2 class="section-title text-left">Votre départ de l'hôpital</h2>
+            <div class="content-grid">
+                <div class="content-text">
+                    <p>La sortie de l'hôpital est une étape importante. Nous vous préparons au mieux pour votre retour à domicile ou votre orientation vers une autre structure.</p>
+                    <h3>Formalités de sortie :</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Remise de vos ordonnances de sortie.</li>
+                        <li><i class="fas fa-check-circle"></i> Explication de votre traitement et des consignes.</li>
+                        <li><i class="fas fa-check-circle"></i> Remise de votre compte-rendu d'hospitalisation.</li>
+                        <li><i class="fas fa-check-circle"></i> Organisation de votre transport si nécessaire.</li>
+                        <li><i class="fas fa-check-circle"></i> Prise de rendez-vous pour les contrôles post-hospitalisation.</li>
+                    </ul>
+                    <p>Un membre de l'équipe soignante s'entretiendra avec vous avant votre départ pour s'assurer que vous avez toutes les informations nécessaires.</p>
+                    <a href="#" class="btn-link">Comprendre les démarches de sortie</a>
+                </div>
+                <div class="content-image">
+                    <img src="images/patient_sortie.jpg" alt="Patient quittant l'hôpital">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="droits" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title text-left">Vos droits et démarches</h2>
+            <div class="content-grid reverse-grid">
+                <div class="content-text">
+                    <p>En tant que patient, vous disposez de droits fondamentaux qui garantissent le respect et la qualité de votre prise en charge.</p>
+                    <h3>Principaux droits :</h3>
+                    <ul>
+                        <li><i class="fas fa-user-check"></i> Droit à l'information et au consentement libre et éclairé.</li>
+                        <li><i class="fas fa-user-shield"></i> Droit au respect de la dignité, de l'intimité et de la confidentialité.</li>
+                        <li><i class="fas fa-file-medical"></i> Droit d'accès à votre dossier médical.</li>
+                        <li><i class="fas fa-handshake"></i> Droit de désigner une personne de confiance.</li>
+                        <li><i class="fas fa-chart-line"></i> Droit aux directives anticipées.</li>
+                        <li><i class="fas fa-comments"></i> Droit de faire valoir vos observations et réclamations.</li>
+                    </ul>
+                    <p>Le Centre Hospitalier s'engage à respecter scrupuleusement ces droits. Pour toute question, n'hésitez pas à vous adresser au service d'accueil des usagers.</p>
+                    <a href="#" class="btn-link">En savoir plus sur vos droits</a>
+                </div>
+                <div class="content-image">
+                    <img src="images/droits_patient.jpg" alt="Patient et droits">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="qualite" class="content-section">
+        <div class="container">
+            <h2 class="section-title text-left">Qualité & Sécurité des soins</h2>
+            <div class="content-grid">
+                <div class="content-text">
+                    <p>La qualité et la sécurité de vos soins sont au cœur de nos préoccupations. Nous mettons en œuvre des procédures rigoureuses pour garantir une prise en charge optimale.</p>
+                    <p>Notre démarche qualité est certifiée et nous travaillons continuellement à l'amélioration de nos pratiques, notamment à travers des indicateurs de performance et des retours d'expérience des patients.</p>
+                    <a href="#" class="btn-link">Voir nos indicateurs qualité</a>
+                </div>
+                <div class="content-image">
+                    <img src="images/qualite_soins.jpg" alt="Qualité des soins">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="vieprivee" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title text-left">Protection de votre vie privée</h2>
+            <div class="content-grid reverse-grid">
+                <div class="content-text">
+                    <p>Vos données de santé sont confidentielles et nous nous engageons à les protéger conformément à la réglementation en vigueur (RGPD).</p>
+                    <p>Seuls les professionnels de santé autorisés et impliqués dans votre prise en charge ont accès à votre dossier médical. Vous pouvez à tout moment exercer votre droit d'accès, de rectification ou d'opposition concernant vos données.</p>
+                    <a href="#" class="btn-link">Consulter notre politique de confidentialité</a>
+                </div>
+                <div class="content-image">
+                    <img src="images/data_privacy.jpg" alt="Confidentialité des données">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pratique" class="content-section">
+        <div class="container">
+            <h2 class="section-title text-left">Informations pratiques</h2>
+            <div class="content-grid">
+                <div class="content-text">
+                    <h3>Accès et Stationnement :</h3>
+                    <p>Le Centre Hospitalier est situé . Des parkings payants sont disponibles pour les visiteurs.</p>
+                    <a href="contact.html#map" class="btn-link">Voir le plan d'accès</a>
+                    <h3>Services complémentaires :</h3>
+                    <ul>
+                        <li><i class="fas fa-wifi"></i> Accès Wi-Fi</li>
+                        <li><i class="fas fa-utensils"></i> Cafétéria / Distributeurs</li>
+                        <li><i class="fas fa-wheelchair"></i> Accès pour personnes à mobilité réduite</li>
+                    </ul>
+                </div>
+                <div class="content-image">
+                    <img src="images/acces_hopital.jpg" alt="Accès à l'hôpital">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="telechargements" class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title text-left">Téléchargements utiles</h2>
+            <p class="section-description text-left">Retrouvez ici tous les documents nécessaires pour préparer votre visite ou votre séjour.</p>
+            <div class="download-grid">
+                <div class="download-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Livret d'Accueil Patient</h3>
+                    <p>Toutes les informations pratiques sur votre hospitalisation.</p>
+                    <a href="#" class="btn-secondary-outline" download>Télécharger <i class="fas fa-download"></i></a>
+                </div>
+                <div class="download-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Check-list patient</h3>
+                    <p>Un outil pour ne rien oublier avant votre admission.</p>
+                    <a href="#" class="btn-secondary-outline" download>Télécharger <i class="fas fa-download"></i></a>
+                </div>
+                <div class="download-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Questionnaire IRM</h3>
+                    <p>Document obligatoire à remplir avant votre rendez-vous IRM.</p>
+                    <a href="#" class="btn-secondary-outline" download>Télécharger <i class="fas fa-download"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer" id="mainFooterPlaceholder"></footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

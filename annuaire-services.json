@@ -1,0 +1,92 @@
+[
+  {
+    "id": "dr-dupont-medecine",
+    "name": "Dr. Jean Dupont",
+    "specialty": "Médecine Interne",
+    "service_id": "service-medecine",
+    "service_title": "Service de Médecine",
+    "contact_direct": "04 66 79 10 20",
+    "email": "dr.dupont@ch-bagnols.fr",
+    "type": "medecin"
+  },
+  {
+    "id": "dr-martin-cardiologie",
+    "name": "Dr. Sophie Martin",
+    "specialty": "Cardiologie",
+    "service_id": "service-medecine",
+    "service_title": "Service de Médecine",
+    "contact_direct": "04 66 79 10 21",
+    "email": "dr.martin@ch-bagnols.fr",
+    "type": "medecin"
+  },
+  {
+    "id": "dr-legrand-chirurgie",
+    "name": "Dr. Marc Legrand",
+    "specialty": "Chirurgie Générale & Viscérale",
+    "service_id": "chirurgie-generale-annuaire",
+    "service_title": "Service de Chirurgie Générale",
+    "contact_direct": "04 66 79 30 10",
+    "email": "dr.legrand@ch-bagnols.fr",
+    "type": "medecin"
+  },
+  {
+    "id": "dr-duval-radio",
+    "name": "Dr. Anne Duval",
+    "specialty": "Radiologie",
+    "service_id": "imagerie-medicale-annuaire",
+    "service_title": "Service d'Imagerie Médicale",
+    "contact_direct": "04 66 79 10 08",
+    "email": "dr.duval@ch-bagnols.fr",
+    "type": "medecin"
+  },
+  {
+    "id": "dr-brun-pediatrie",
+    "name": "Dr. Camille Brun",
+    "specialty": "Pédiatrie",
+    "service_id": "pediatrie-annuaire",
+    "service_title": "Pédiatrie",
+    "contact_direct": "04 66 79 50 30",
+    "email": "dr.brun@ch-bagnols.fr",
+    "type": "medecin"
+  },
+  {
+    "id": "dr-blanc-geriatrie",
+    "name": "Dr. Nicolas Blanc",
+    "specialty": "Gériatrie",
+    "service_id": "geriatrie-annuaire",
+    "service_title": "Gériatrie",
+    "contact_direct": "04 66 79 40 40",
+    "email": "dr.blanc@ch-bagnols.fr",
+    "type": "medecin"
+  },
+  {
+    "id": "dr-durand-labo",
+    "name": "Dr. Laura Durand",
+    "specialty": "Biologiste Médical",
+    "service_id": "laboratoire-annuaire",
+    "service_title": "Laboratoire d'Analyses Médicales",
+    "contact_direct": "04 66 79 60 50",
+    "email": "dr.durand@ch-bagnols.fr",
+    "type": "medecin"
+  },
+  {
+    "id": "inf-lemercier-ssiad",
+    "name": "Inf. Sophie Lemercier",
+    "specialty": "Infirmière Coordinatrice",
+    "service_id": "ssiad-annuaire",
+    "service_title": "Service de Soins Infirmiers à Domicile (SSIAD)",
+    "contact_direct": "04 66 79 XX XX",
+    "email": "inf.lemercier@ch-bagnols.fr",
+    "type": "paramedical"
+  },
+    {
+    "id": "aide-dupont-ehpad",
+    "name": "Aide S. Christine Dupont",
+    "specialty": "Aide-Soignante",
+    "service_id": "ehpad-annuaire",
+    "service_title": "EHPAD Les 7 Sources",
+    "contact_direct": "04 66 79 XX XX",
+    "email": "aide.dupont@ch-bagnols.fr",
+    "type": "paramedical"
+  }
+]

@@ -1,0 +1,190 @@
+/* NOUVEAU-STYLE.CSS - Styles pour le nouveau header */
+
+/* --- Variables (vous pouvez les ajuster) --- */
+:root {
+    --header-height: 80px; /* Hauteur initiale du header */
+    --header-sticky-height: 65px; /* Hauteur du header en mode "sticky" */
+    --primary-blue: #005a9e; /* Bleu institutionnel, un peu plus moderne */
+    --dark-blue: #003366;
+    --accent-green: #6cbf4d;
+    --light-gray: #f4f7fa;
+    --text-color: #333;
+    --border-color: #e0e0e0;
+    --header-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Style de base pour le Header --- */
+.main-header {
+    background-color: #fff;
+    padding: 0; /* Le padding sera géré par la hauteur */
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: var(--header-height);
+    transition: all 0.4s ease-in-out;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logo img {
+    height: 50px;
+    transition: height 0.4s ease-in-out;
+}
+
+/* --- Navigation Principale --- */
+.main-nav ul {
+    display: flex;
+    gap: 10px; /* Espacement réduit, le padding fera le reste */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul li a {
+    color: var(--dark-blue);
+    font-weight: 600;
+    padding: 12px 16px;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    border-radius: 8px; /* Bords arrondis pour un look moderne */
+    transition: all 0.3s ease;
+}
+
+/* Effet de survol sur les liens */
+.main-nav ul li a:hover {
+    background-color: var(--light-gray);
+    color: var(--primary-blue);
+}
+
+/* Ligne animée sous le lien actif */
+.main-nav ul li.active a {
+    color: var(--primary-blue);
+}
+
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-blue);
+    transition: width 0.3s ease-in-out;
+}
+
+.main-nav ul li.active a::after,
+.main-nav ul li a:hover::after {
+    width: 60%; /* La ligne apparaît et s'élargit */
+}
+
+
+/* --- Menu Déroulant Amélioré --- */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: var(--header-shadow);
+    z-index: 1;
+    min-width: 240px;
+    border-radius: 8px;
+    padding: 10px 0;
+    top: 90%; /* Un peu plus bas pour un effet "flottant" */
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    color: var(--text-color);
+    padding: 12px 20px;
+    font-weight: 500;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--light-gray);
+    color: var(--primary-blue);
+    padding-left: 25px; /* Petit décalage au survol */
+}
+.dropdown-menu a::after {
+    display: none; /* Pas de ligne animée dans le dropdown */
+}
+
+
+/* --- Styles pour le Header "Sticky" (après défilement) --- */
+.main-header.sticky {
+    height: var(--header-sticky-height);
+    box-shadow: var(--header-shadow);
+}
+
+.main-header.sticky .logo img {
+    height: 40px; /* Logo plus petit */
+}
+
+/* --- Boutons d'action dans le header --- */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-actions .btn-search {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: var(--dark-blue);
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.header-actions .btn-search:hover {
+    color: var(--primary-blue);
+    background-color: var(--light-gray);
+}
+/* AJOUT À FAIRE DANS nouveau-style.css */
+
+/* --- Style général des boutons --- */
+.btn {
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-align: center;
+    display: inline-block;
+    line-height: 1.2; /* Pour un meilleur alignement vertical du texte */
+}
+
+/* Bouton secondaire (utilisé pour "Retour au CH") */
+.btn-secondary {
+    background-color: var(--light-gray);
+    color: var(--primary-blue);
+    border-color: var(--border-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: #fff;
+}

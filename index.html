@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Centre Hospitalier</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="top-bar" id="topBarPlaceholder"></div>
+
+<header class="main-header" id="mainHeaderPlaceholder"></header>
+
+    <section class="hero-section">
+ <div class="hero-video-container">
+ <video autoplay loop muted poster="chemin/vers/une/image_de_poster.jpg">
+  <source src="videos/grandbatiment_video.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la balise vidéo.
+ </video>
+</div>
+        <div class="hero-overlay">
+            <div class="container hero-content">
+                <h1>Centre Hospitalier</h1>
+                <p>Votre Santé, Notre Priorité au Quotidien. Des soins de qualité, accessibles et humains.</p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn-primary">Prendre rendez-vous</a>
+                    <a href="soins.html" class="btn-recommendations">Voir nos services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quick-access-section">
+        <div class="container">
+            <h2 class="section-title">Un Accès Simple et Rapide à nos Services</h2>
+            <p class="section-description">Trouvez rapidement les informations essentielles pour votre parcours de soins.</p>
+
+            <div class="access-grid">
+                <div class="access-card">
+                    <div class="icon-wrapper"><i class="fas fa-calendar-alt"></i></div>
+                    <h3>Prenez Rendez-vous</h3>
+                    <p>Consultez nos spécialistes et planifiez votre visite en ligne.</p>
+                    <a href="contact.html" class="card-link">Prendre RDV <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="access-card">
+                    <div class="icon-wrapper"><i class="fas fa-user-injured"></i></div>
+                    <h3>Informations Patients</h3>
+                    <p>Préparez votre venue, vos droits, vos démarches administratives.</p>
+                    <a href="patients.html" class="card-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="access-card">
+                    <div class="icon-wrapper"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <h3>Je paie ma facture</h3>
+                    <p>Accédez en toute sécurité à votre espace personnel pour régler vos frais.</p>
+                    <a href="https://www.tipi.budget.gouv.fr/tpa/accueilclient.web" target="_blank" class="card-link">Payer en ligne <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="access-card">
+                    <div class="icon-wrapper"><i class="fas fa-briefcase-medical"></i></div>
+                    <h3>Urgences & Gardes</h3>
+                    <p>Que faire en cas d'urgence ? Où nous trouver rapidement.</p>
+                    <a href="soins.html#urgences" class="card-link">Accéder aux urgences <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container about-content">
+            <div class="about-image">
+                <img src="images/equipe_soignante.jpg" alt="Équipe soignante du Centre Hospitalier">
+            </div>
+            <div class="about-text">
+                <h4 class="section-subtitle">Notre Engagement</h4>
+                <h2 class="section-title">Un Hôpital au Cœur de Votre Vie</h2>
+                <p>Depuis plus de 50 ans, le Centre Hospitalier est un acteur majeur de la santé dans notre région. Nous nous engageons à offrir des soins de proximité de haute qualité, une expertise médicale reconnue et un accompagnement humain à chaque patient.</p>
+                <p>Nos équipes dévouées travaillent chaque jour pour améliorer votre bien-être et vous offrir le meilleur suivi possible, dans un environnement moderne et bienveillant. Découvrez comment nous vous accompagnons, de votre admission à votre départ, en passant par toutes les étapes de votre séjour.</p>
+                <a href="hopital.html#quisommesnous" class="btn-primary">Découvrir l'hôpital</a>
+            </div>
+        </div>
+    </section>
+
+<section class="services-section">
+        <div class="container">
+            <h4 class="section-subtitle">Nos Pôles d'Excellence</h4>
+            <h2 class="section-title">Une organisation dédiée à votre prise en charge globale.</h2>
+            <p class="section-description">Du diagnostic au suivi post-hospitalisation, notre hôpital vous accompagne à chaque étape grâce à nos pôles spécialisés.</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-flask"></i></div>
+                    <h3>Pôle Médico-technique</h3>
+                    <p>Laboratoire d'analyses, imagerie médicale (radiologie, scanner, IRM) et pharmacie hospitalière.</p>
+                    <a href="soins.html?pole=medicotechnique" class="card-link">Découvrir le pôle <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-wheelchair"></i></div>
+                    <h3>Pôle Gériatrie</h3>
+                    <p>Accompagnement et soins spécialisés pour les personnes âgées, en hospitalisation ou en EHPAD.</p>
+                    <a href="soins.html?pole=geriatrie" class="card-link">Découvrir le pôle <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-baby"></i></div>
+                    <h3>Pôle Femme, Mère & Enfant</h3>
+                    <p>Maternité, pédiatrie, gynécologie, et centres d'action médico-sociale précoce (CAMSP, PCO).</p>
+                    <a href="soins.html?pole=femme-mere-enfant" class="card-link">Découvrir le pôle <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="icon-wrapper small-icon"><i class="fas fa-user-doctor"></i></div>
+                    <h3>Pôle Chirurgie</h3>
+                    <p>Chirurgie générale, orthopédique, traumatologique, et partenariats en neurochirurgie et urologie.</p>
+                    <a href="soins.html?pole=chirurgie" class="card-link">Découvrir le pôle <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card service-card-cta">
+                    <div class="card-content">
+                        <i class="fas fa-arrow-right fa-3x text-primary mb-3"></i>
+                        <h3>Explorer tous nos services et spécialités</h3>
+                        <p>Retrouvez l'intégralité de notre offre de soins.</p>
+                        <a href="soins.html" class="btn-primary btn-lg mt-3">Voir tous les services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+
+   
+    <section class="news-events-section">
+        <div class="container">
+            <h4 class="section-subtitle">Dernières Actualités</h4>
+            <h2 class="section-title">Restez Informé des Nouveautés de l'Hôpital</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <img src="images/news_vaccination.jpg" alt="Journée Portes Ouvertes Vaccination">
+                    <div class="news-content">
+                        <span class="news-date"><i class="far fa-calendar-alt"></i> 15 Janvier 2025</span>
+                        <h3>Journée Portes Ouvertes Vaccination Grippe</h3>
+                        <p>Participez à notre campagne de vaccination pour vous protéger et protéger votre entourage.</p>
+                        <a href="actualites.html" class="card-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img src="images/news_recherche.jpg" alt="Avancées en recherche médicale">
+                    <div class="news-content">
+                        <span class="news-date"><i class="far fa-calendar-alt"></i> 02 Février 2025</span>
+                        <h3>Nouvelles Avancées en Recherche Cardiaque</h3>
+                        <p>Découvrez les dernières innovations de notre équipe de cardiologie pour des diagnostics plus précis.</p>
+                        <a href="actualites.html" class="card-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img src="images/news_benevolat.jpg" alt="Appel aux bénévoles">
+                    <div class="news-content">
+                        <span class="news-date"><i class="far fa-calendar-alt"></i> 28 Février 2025</span>
+                        <h3>Rejoignez Notre Équipe de Bénévoles</h3>
+                        <p>Nous recherchons des personnes passionnées pour accompagner nos patients au quotidien.</p>
+                        <a href="actualites.html" class="card-link">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="button-center">
+                <a href="actualites.html" class="btn-primary">Toutes les actualités</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-cta-section">
+        <div class="container">
+            <div class="contact-cta-content">
+                <div class="cta-text-content">
+                    <h2 class="section-title">Besoin d'aide ou d'informations ?</h2>
+                    <p>Notre équipe est à votre écoute pour répondre à toutes vos questions.</p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary">Nous contacter</a>
+                    <a href="tel:+33466791011" class="btn-secondary-outline"><i class="fas fa-phone-alt"></i> 04 66 79 10 11</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<footer class="main-footer" id="mainFooterPlaceholder"></footer>
+
+    <script src="script.js"></script> </body>
+</html>
