@@ -1,12 +1,12 @@
 /* Variables CSS pour les couleurs, polices et espacements */
 :root {
-    --primary-blue: #007bff; /* Bleu vif pour les actions principales */
-    --dark-blue: #004085; /* Bleu foncé pour le texte et les fonds */
-    --accent-green: #6cbf4d; /* Vert pour les accents et titres secondaires */
+    --primary-blue: #AED6F1; /* Bleu vif pour les actions principales */
+    --dark-blue: #DADE25; /* Bleu foncé pour le texte et les fonds */
+    --accent-green: #A3E4D7; /* Vert pour les accents et titres secondaires */
     --red-urgence: #dc3545; /* Rouge pour le bouton urgence */
     --light-gray: #f8f9fa; /* Arrière-plan léger */
-    --medium-gray: #e9ecef; /* Bordures, séparateurs */
-    --text-color: #343a40; /* Texte principal */
+    --medium-gray: #D5DBDB; /* Bordures, séparateurs */
+    --text-color: #343b42; /* Texte principal */
     --heading-color: #212529; /* Titres */
 
     --font-primary: 'Montserrat', sans-serif;
